@@ -2,8 +2,6 @@
 import memes from "../dummy/list.json";
 import axios from "axios";
 
-const { RAPIDMEME_KEY } = process.env;
-
 export interface TrendingMeme {
   created_utc: number;
   title: string;
@@ -67,8 +65,7 @@ export const useApi = () => {
         },
         headers: {
           "X-RapidAPI-Key":
-            // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-            RAPIDMEME_KEY!,
+            "da448481ccmshb236abfc2f9a79cp10a4a5jsna5b4da544728",
           "X-RapidAPI-Host": "ronreiter-meme-generator.p.rapidapi.com",
         },
         responseType: "blob",
