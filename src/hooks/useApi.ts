@@ -1,4 +1,4 @@
-import trending from "../dummy/trending.json";
+//import trending from "../dummy/trending.json";
 import memes from "../dummy/list.json";
 import axios from "axios";
 
@@ -14,13 +14,16 @@ export interface Meme {
 }
 
 export const useApi = () => {
-  const getTrending = (): Promise<TrendingMeme[]> => {
+  const getTrending = async (): Promise<TrendingMeme[]> => {
+    const baseUrl = window.location.origin;
+    const result = await axios.get(`${baseUrl}/.netlify/functions/crazy-memes`);
+    return result.data;
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(trending);
-      }, 2000);
-    });
+    //return new Promise((resolve, reject) => {
+    //setTimeout(() => {
+    //resolve(trending);
+    //}, 2000);
+    //});
   };
 
   const getMemes = (): Promise<Meme[]> => {

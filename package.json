@@ -17,6 +17,8 @@
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.13.5",
+    "@netlify/functions": "^1.6.0",
+    "@types/node": "^14.18.53",
     "axios": "^1.4.0",
     "eslint-plugin-disable": "^2.0.3",
     "react": "^18.2.0",
@@ -34,7 +36,7 @@
     "eslint": "^8.38.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
-    "typescript": "^5.0.2",
+    "typescript": "^4.9.5",
     "vite": "^4.3.9"
   }
 }
