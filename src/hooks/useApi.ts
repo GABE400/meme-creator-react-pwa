@@ -15,8 +15,11 @@ export interface Meme {
 
 export const useApi = () => {
   const getTrending = async (): Promise<TrendingMeme[]> => {
-    const baseUrl = window.location.origin;
-    const result = await axios.get(`${baseUrl}/.netlify/functions/crazy-memes`);
+    //const baseUrl = window.location.origin;
+    //const result = await axios.get(`${baseUrl}/.netlify/functions/crazy-memes`);
+    const result = await axios.get(
+      `https://main--gabeapps.netlify.app/.netlify/functions/crazy-memes`
+    );
     return result.data;
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     //return new Promise((resolve, reject) => {
